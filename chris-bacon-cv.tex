@@ -1,0 +1,45 @@
+\documentclass[a4paper, 10pt]{article}
+
+\usepackage[a4paper, left=25mm, top=26mm, right=25mm, bottom=15mm]{geometry}
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{titling}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+% \titleformat{section}[shape]{format}{label}{horizontal_seperation}{before_code}[{after_code}]
+% http://anorien.csc.warwick.ac.uk/mirrors/CTAN/macros/latex/contrib/titlesec/titlesec.pdf
+\titleformat{\section}[hang]{\large\scshape}{\thesection}{1em}{}[{\hrule}]
+\titleformat{\subsection}[hang]{\normalfont\scshape}{\thesection}{1em}{}[{}]
+
+% Set global noindent for whole of file
+\setlength\parindent{0pt}
+% Set no space between bullet points
+\setlist[itemize]{noitemsep,nolistsep}
+
+% Set title formatting
+\setlength{\droptitle}{-80pt}
+
+\title{\textsc{CHRISTOPHER BACON}}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\vspace{-75pt}
+\input{head}
+\input{experience.tex}
+\input{education.tex}
+\input{open_source.tex}
+\input{personal_projects.tex}
+\input{presentations.tex}
+
+\end{document}
